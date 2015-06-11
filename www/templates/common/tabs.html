@@ -1,0 +1,33 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-striped tabs-positive tabs-icon-top tabs-color-active-stable">
+
+  <!-- Event Tab -->
+  <ion-tab title="Event" icon-off="ion-android-calendar" icon-on="ion-android-calendar" ui-sref="profile-menu.tab.event">
+    <ion-nav-view name="tab-event"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Calendar Tab -->
+  <ion-tab title="Calendar" icon-off="ion-calendar" icon-on="ion-calendar" ui-sref="profile-menu.tab.calendar">
+    <ion-nav-view name="tab-calendar"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Appointment Tab -->
+  <ion-tab title="Appointment" icon-off="ion-medkit" icon-on="ion-medkit" ui-sref="profile-menu.tab.appointment">
+    <ion-nav-view name="tab-appointment"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Vaccination Information Tab -->
+  <ion-tab title="Vaccination" icon-off="ion-information" icon-on="ion-information" ui-sref="profile-menu.tab.vaccination">
+    <ion-nav-view name="tab-vaccination"></ion-nav-view>
+  </ion-tab>
+
+  <!-- More Tab -->
+  <ion-tab title="More" icon-off="ion-navicon" icon-on="ion-navicon" ui-sref="profile-menu.tab.more">
+    <ion-nav-view name="tab-more"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>
