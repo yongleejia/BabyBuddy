@@ -27,17 +27,18 @@
       <ion-list>
         <ion-item class="item-positive item-avatar-left" href="#" menu-close>
           <img src="http://tutupash.com/site/assets/nin_logo.jpeg" />
-          <div class="h4 title">Baby Jason</div>
+          <div class="h4 title">{{selectedName}}</div>
         </ion-item>
 
-        <ion-item class="item-divider">Baby Profiles<span class="item-note">available</span></ion-item>
+        <ion-item class="item-divider">Baby Profiles<span class="item-note">{{available}}</span></ion-item>
 
-        <ion-item class="item-avatar-left" href="#" menu-close>
-          <img src="http://tutupash.com/site/assets/nin_logo.jpeg" />Baby Jason
+        <ion-item class="item-avatar-left" href="#" menu-close ng-repeat="name in BabyNames" ng-click="selectName(name)">
+          <img src="http://tutupash.com/site/assets/nin_logo.jpeg" />
+          {{name}}
         </ion-item>
-        <ion-item class="item-avatar-left" href="#" menu-close>
-          <img src="http://tutupash.com/site/assets/nin_logo.jpeg" />Baby Vanessa
-        </ion-item>
+
+        <ion-item menu-close ng-click="goAccountInformation()">Accounts Information</ion-item>
+
       </ion-list>
     </ion-content>
   </ion-side-menu>

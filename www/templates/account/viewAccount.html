@@ -1,0 +1,50 @@
+<ion-view ng-controller="viewAccount" title="View Account" class="bubble-background">
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-buttons side="left">
+      <a class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="accountInformation">Back</a>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+      <button class="button button-stable" ng-click="toggleEdit()">
+        Edit
+      </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+      <ion-list>
+        <label class="item item-input">
+          <i class="ion-happy"></i>&nbsp&nbsp&nbsp&nbsp&nbsp
+          <input type="text" ng-readonly="!account.allowEdit" ng-model="account.name">
+        </label>
+
+        <label class="item item-input">
+          <i class="ion-transgender"></i>&nbsp&nbsp&nbsp&nbsp&nbsp
+          <select ng-model="account.gender">
+            <option ng-disabled="!account.allowEdit" value="M">M</option>
+            <option ng-disabled="!account.allowEdit" value="F">F</option>
+          </select>
+        </label>
+
+        <label class="item item-input">
+          <i class="ion-android-calendar"></i>&nbsp&nbsp&nbsp&nbsp&nbsp
+          <input type="text" ng-readonly="!account.allowEdit" ng-model="account.dob" jqdatepicker />
+        </label>
+
+        <div class="item range range-positive">
+          &nbsp<i class="ion-ios-body"></i>&nbsp&nbsp&nbsp&nbsp
+          &nbsp{{account.length}} cm
+          <input type="range" ng-readonly="!account.allowEdit" ng-model="account.length" min="0" max="100" value="33" step="0.1">
+        </div>
+
+        <div class="item range range-positive">
+          &nbsp<i class="ion-ios-speedometer-outline"></i>&nbsp&nbsp&nbsp&nbsp
+          &nbsp{{account.weight}} kg
+          <input type="range" ng-readonly="!account.allowEdit" ng-model="account.weight" min="0" max="15" value="33" step="0.1">
+        </div>
+
+      </ion-list>
+      <button class="button button-block button-assertive" ng-click="deleteAccount()" ng-show=!account.allowEdit>Delete Account</button>
+      <button class="button button-block button-stable" ng-click="editAccount()" ng-show=account.allowEdit>Edit Account</button>
+    </ion-content>
+  </ion-nav-bar>
+</ion-view>

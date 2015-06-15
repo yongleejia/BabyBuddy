@@ -1,0 +1,21 @@
+<ion-view ng-controller="accountInformation" title="Accounts Information" class="bubble-background">
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-buttons side="left">
+      <a class="button icon-left ion-chevron-left button-clear button-dark" ng-click="goBack()">Back</a>
+    </ion-nav-buttons>
+
+    <ion-nav-buttons side="right">
+      <button class="button button-stable" ng-click="add()">
+        Add Account
+      </button>
+    </ion-nav-buttons>
+
+    <ion-content>
+      <ion-list>
+        <ion-item ng-repeat="name in BabyNames" href="#/viewAccount/{{name}}">
+          {{name}}
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-nav-bar>
+</ion-view>

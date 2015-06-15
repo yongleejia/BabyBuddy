@@ -39,7 +39,9 @@ angular.module('babyBuddyApp', ['ionic'])
   .state('profile-menu', {
     url : '/profile-menu',
     abstract: true,
-    templateUrl : 'templates/common/profile-menu.html'
+    templateUrl : 'templates/common/profile-menu.html',
+    controller: 'profileMenu',
+    cache: false
   })
 
   // setup an abstract state for the tabs directive
@@ -47,6 +49,26 @@ angular.module('babyBuddyApp', ['ionic'])
     url: '/tab',
     abstract: true,
     templateUrl: 'templates/common/tabs.html'
+  })
+
+  .state('accountInformation', {
+    url: "/accountInformation",
+    templateUrl: "templates/account/accountInformation.html",
+    controller: "accountInformation",
+    cache: false
+  })
+
+  .state('addAccount', {
+    url: "/addAccount",
+    templateUrl: "templates/account/AddAccount.html",
+    controller: "addAccount",
+    cache: false
+  })
+
+  .state('viewAccount', {
+    url: "/viewAccount/:name",
+    templateUrl: "templates/account/viewAccount.html",
+    controller: "viewAccount"
   })
 
   .state('profile-menu.tab.event', {

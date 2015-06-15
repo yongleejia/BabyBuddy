@@ -1,0 +1,42 @@
+<ion-view ng-controller="addAccount" title="Add Account" class="bubble-background">
+  <ion-nav-bar class="bar-stable">
+    <ion-nav-buttons side="left">
+      <a class="button icon-left ion-chevron-left button-clear button-dark" ui-sref="accountInformation">Back</a>
+    </ion-nav-buttons>
+
+    <ion-content class="padding">
+      <form ng-submit="addAccount(account)">
+        <div class="list">
+            <label class="item item-input item-stacked-label">
+              <span class="input-label">Name</span>
+              <input type="text" placeholder="Jason Lim" ng-model="account.name">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Gender</span><br>
+                <select ng-model="account.gender">
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Date of Birth</span><br>
+                <input type="text" placeholder="01/06/2015" ng-model="account.dob" jqdatepicker />
+            </label>
+
+            <div class="item range range-positive">
+            &nbsp<label>Length (Cm)<br>{{account.length}}</label><input type="range" ng-model="account.length" min="0" max="100" value="0" step="0.1">
+            </div>
+
+            <div class="item range range-positive">
+                &nbsp<label>Weight (Kg)<br>{{account.weight}}</label><input type="range" ng-model="account.weight" min="0" max="15" value="0" step="0.1">
+            </div>
+        </div>
+        <button class="button button-block button-stable">Add</button>
+      </form>
+    </ion-content>
+  </ion-nav-bar>
+
+
+</ion-view>
