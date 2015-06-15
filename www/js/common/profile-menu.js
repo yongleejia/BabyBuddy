@@ -2,7 +2,7 @@ angular.module('babyBuddyApp')
 
     .controller('profileMenu', function ($scope, $state) {
         var db = new PouchDB('accounts');
-        $scope.selectedName = "NA";
+        $scope.selectedName = "Not selected";
         $scope.available = "Not available";
         $scope.BabyNames = new Array();
 
@@ -19,8 +19,10 @@ angular.module('babyBuddyApp')
                     $scope.BabyNames[i] = tempName;
                 }
             }
-            $scope.selectedName = $scope.BabyNames[0];
-            $scope.available = "available";
+            if(result.total_rows!= 0) {
+                $scope.selectedName = $scope.BabyNames[0];
+                $scope.available = "available";
+            }
         }).catch(function (err) {
             console.log(err);
         });

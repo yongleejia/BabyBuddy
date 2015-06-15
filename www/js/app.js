@@ -60,7 +60,7 @@ angular.module('babyBuddyApp', ['ionic'])
 
   .state('addAccount', {
     url: "/addAccount",
-    templateUrl: "templates/account/AddAccount.html",
+    templateUrl: "templates/account/addAccount.html",
     controller: "addAccount",
     cache: false
   })

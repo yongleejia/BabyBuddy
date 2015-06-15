@@ -11,7 +11,14 @@ angular.module('babyBuddyApp')
             }).then(function (result) {
                 if (account != null && account.name != null && account.gender != null && account.dob != null && account.length != 0 && account.weight != 0)
                 {
-                        var idTemp = parseInt(result.rows[result.rows.length-1].doc._id) + 1;
+                        var idTemp;
+                        if(result.total_rows!= 0) {
+                            idTemp = parseInt(result.rows[result.rows.length - 1].doc._id) + 1;
+                        }
+                        else {
+                            idTemp = 1;
+                        }
+
                         var doc = {
                             "_id": idTemp+"",
                             "name": account.name,
