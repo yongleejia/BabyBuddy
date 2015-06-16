@@ -27,6 +27,7 @@ angular.module('babyBuddyApp')
 
                     var tempDOB = JSON.stringify(result.rows[i].doc.DOB);
                     tempDOB = tempDOB.replace(/["]/g,'');
+                    tempDOB = new Date(tempDOB);
 
                     var tempLength = JSON.stringify(result.rows[i].doc.length);
                     tempLength = tempLength.replace(/["]/g,'');
@@ -116,24 +117,4 @@ angular.module('babyBuddyApp')
                     }
                 });
         }
-    });
-
-    var datePicker = angular.module('babyBuddyApp');
-
-    datePicker.directive('jqdatepicker', function () {
-        return {
-            restrict: 'A',
-            require : 'ngModel',
-            link : function (scope, element, attrs, ngModelCtrl) {
-                $(function(){
-                    element.datepicker({
-                        dateFormat:'dd/mm/yy',
-                        onSelect:function (date) {
-                            ngModelCtrl.$setViewValue(date);
-                            scope.$apply();
-                        }
-                    });
-                });
-            }
-        };
     });

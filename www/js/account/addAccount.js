@@ -9,6 +9,7 @@ angular.module('babyBuddyApp')
                 include_docs: true,
                 attachments: true
             }).then(function (result) {
+
                 if (account != null && account.name != null && account.gender != null && account.dob != null && account.length != 0 && account.weight != 0)
                 {
                         var idTemp;
@@ -46,23 +47,3 @@ angular.module('babyBuddyApp')
             });
         }
     });
-
-var datePicker = angular.module('babyBuddyApp');
-
-datePicker.directive('jqdatepicker', function () {
-    return {
-        restrict: 'A',
-        require : 'ngModel',
-        link : function (scope, element, attrs, ngModelCtrl) {
-            $(function(){
-                element.datepicker({
-                    dateFormat:'dd/mm/yy',
-                    onSelect:function (date) {
-                        ngModelCtrl.$setViewValue(date);
-                        scope.$apply();
-                    }
-                });
-            });
-        }
-    };
-});
