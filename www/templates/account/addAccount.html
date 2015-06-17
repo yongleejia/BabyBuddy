@@ -7,6 +7,14 @@
     <ion-content class="padding">
       <form ng-submit="addAccount(account)">
         <div class="list">
+
+            <div class="item range range-positive"/>
+                &nbsp<label>Profile Picture<br />
+            <img data-ng-src="{{image_url}}" height="50" width="50" ><br>
+            <button type="button" ng-click="launchPhotoLibrary()">Add</button>
+            </label>
+            </div>
+
             <label class="item item-input item-stacked-label">
               <span class="input-label">Name</span>
               <input type="text" placeholder="Jason Lim" ng-model="account.name">

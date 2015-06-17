@@ -38,12 +38,16 @@ angular.module('babyBuddyApp')
                     var tempRev = JSON.stringify(result.rows[i].doc._rev);
                     tempRev = tempRev.replace(/["]/g,'');
 
+                    var tempImageURL = JSON.stringify(result.rows[i].doc.imgUrl);
+                    tempImageURL = tempImageURL.replace(/["]/g,'');
+
                     $scope.id = tempId;
                     $scope.gender = tempGender;
                     $scope.DOB = tempDOB;
                     $scope.length = tempLength;
                     $scope.weight = tempWeight;
                     $scope.rev = tempRev;
+                    $scope.image_url = tempImageURL;
 
                     $scope.account = {id: $scope.id, name: $scope.name, gender:$scope.gender, dob:$scope.DOB, length:$scope.length, weight:$scope.weight, rev:$scope.rev, allowEdit:false};
                 }

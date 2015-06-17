@@ -6,7 +6,7 @@
 // 'babyBuddyApp.services' is found in services.js
 // 'babyBuddyApp.controllers' is found in controllers.js
 //angular.module('babyBuddyApp', ['ionic', 'babyBuddyApp.controllers', 'babyBuddyApp.services'])
-angular.module('babyBuddyApp', ['ionic'])
+angular.module('babyBuddyApp', ['ionic', 'ngCordova', 'jrCrop'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

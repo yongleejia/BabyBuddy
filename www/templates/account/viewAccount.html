@@ -12,6 +12,13 @@
 
     <ion-content>
       <ion-list>
+        <div class="item range range-positive"/>
+          &nbsp<label>Profile Picture<br />
+          <img data-ng-src="{{image_url}}" height="50" width="50" ><br>
+          <button type="button" ng-disabled="!account.allowEdit" ng-click="launchPhotoLibrary()">Reupload</button>
+          </label>
+        </div>
+
         <label class="item item-input">
           <i class="ion-happy"></i>&nbsp&nbsp&nbsp&nbsp&nbsp
           <input type="text" ng-readonly="!account.allowEdit" ng-model="account.name">
