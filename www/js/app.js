@@ -6,7 +6,7 @@
 // 'babyBuddyApp.services' is found in services.js
 // 'babyBuddyApp.controllers' is found in controllers.js
 //angular.module('babyBuddyApp', ['ionic', 'babyBuddyApp.controllers', 'babyBuddyApp.services'])
-angular.module('babyBuddyApp', ['ionic', 'ngCordova', 'jrCrop'])
+angular.module('babyBuddyApp', ['ionic', 'ngCordova', 'jrCrop', 'ui.calendar'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -84,7 +84,8 @@ angular.module('babyBuddyApp', ['ionic', 'ngCordova', 'jrCrop'])
     url: '/calendar',
     views: {
       'tab-calendar': {
-        templateUrl: 'templates/common/calendar.html'
+        templateUrl: 'templates/calendar/calendar.html',
+        controller:"calendar"
       }
     }
   })

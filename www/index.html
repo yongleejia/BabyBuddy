@@ -8,6 +8,7 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="lib/jr-crop-master/dist/jr-crop.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/fullcalendar/dist/fullcalendar.css"/>
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
@@ -26,7 +27,17 @@
     <script src="js/account/accountInformation.js"></script>
     <script src="js/account/addAccount.js"></script>
     <script src="js/account/viewAccount.js"></script>
+    <script src="js/calendar/calendar.js"></script>
     <script src="lib/pouchdb/pouchdb-3.6.0.min.js"></script>
+
+
+    <!-- jquery, moment, and angular have to get included before fullcalendar -->
+    <script type="text/javascript" src="lib/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="lib/moment/moment.js"></script>
+    <script type="text/javascript" src="lib/angular-ui-calendar/src/calendar.js"></script>
+    <script type="text/javascript" src="lib/fullcalendar/dist/fullcalendar.js"></script>
+    <script type="text/javascript" src="lib/fullcalendar/dist/gcal.js"></script>
+
     <!--script src="js/controllers.js"></script>
     <script src="js/services.js"></script-->
   </head>
