@@ -1,1 +1,1 @@
-http://docs.travis-ci.com/user/customizing-the-build/
+[![Build Status](https://travis-ci.org/yongleejia/BabyBuddy.svg?branch=master)](https://travis-ci.org/yongleejia/BabyBuddy)
