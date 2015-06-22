@@ -23,7 +23,7 @@ install:
 - echo "Install stage"
 - npm -g install cordova ionic bower gulp
 - npm install
-- bower install
+- bower install --force-latest
 before_script:
 - echo "Before script stage"
 script:
