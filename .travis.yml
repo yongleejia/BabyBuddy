@@ -37,7 +37,7 @@ script:
 - cordova plugin add org.apache.cordova.network-information
 - cordova plugin add https://github.com/driftyco/ionic-plugins-keyboard.git
 - ionic build android
-- karma.conf.js --single-run
+- karma start karma.conf.js --single-run
 after_success:
 - echo "After success stage"
 after_script:
