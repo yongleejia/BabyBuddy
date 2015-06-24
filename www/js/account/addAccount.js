@@ -3,7 +3,7 @@ angular.module('babyBuddyApp')
     .controller('addAccount', function ($scope, $ionicPopup, $state, $jrCrop) {
         $scope.account = {length: 0, weight:0};
 
-        $scope.addAccount= function(account){
+        $scope.addAccount = function(account){
             var db = new PouchDB('accounts');
             db.allDocs({
                 include_docs: true,

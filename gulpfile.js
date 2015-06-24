@@ -1,3 +1,5 @@
+// Import at the top of the file
+var karma = require('karma').server;
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var bower = require('bower');
@@ -10,6 +12,18 @@ var sh = require('shelljs');
 var paths = {
   sass: ['./scss/**/*.scss']
 };
+
+/**
+* Test task, run test once and exit
+*/
+gulp.task('test', function(done) {
+    karma.start({
+        configFile: __dirname + '/tests/my.conf.js',
+        singleRun: true
+    }, function() {
+        done();
+    });
+});
 
 gulp.task('default', ['sass']);
 
