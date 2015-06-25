@@ -19,7 +19,7 @@ android:
 
 before_install:
 - echo "Before install stage"
-- npm install karma karma-cli karma-jasmine karma-chrome-launcher -save-dev
+- npm install karma karma-cli karma-jasmine -save-dev
 install:
 - echo "Install stage"
 - npm -g install cordova ionic bower gulp
@@ -37,7 +37,7 @@ script:
 - cordova plugin add org.apache.cordova.network-information
 - cordova plugin add https://github.com/driftyco/ionic-plugins-keyboard.git
 - ionic build android
-- karma start karma.conf.js --single-run
+- karma start karma.conf.js --single-run --browsers PhantomJS
 after_success:
 - echo "After success stage"
 after_script:
