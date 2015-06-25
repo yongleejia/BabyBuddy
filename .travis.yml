@@ -19,7 +19,7 @@ android:
 
 before_install:
 - echo "Before install stage"
-- npm install karma karma-cli karma-jasmine -save-dev
+- npm install karma karma-cli karma-phantomjs-launcher karma-jasmine -save-dev
 install:
 - echo "Install stage"
 - npm -g install cordova 
