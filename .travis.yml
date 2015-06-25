@@ -22,7 +22,10 @@ before_install:
 - npm install karma karma-cli karma-jasmine -save-dev
 install:
 - echo "Install stage"
-- npm -g install cordova ionic bower gulp
+- npm -g install cordova 
+- npm -g install ionic 
+- npm -g install bower 
+- npm -g install gulp
 - npm install
 - bower install --force-latest
 before_script:
