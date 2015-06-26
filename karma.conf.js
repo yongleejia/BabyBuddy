@@ -20,6 +20,7 @@ module.exports = function(config) {
       "www/lib/ng-cordova-0.1.17-alpha/dist/ng-cordova.js",
       "www/lib/jr-crop-master/dist/jr-crop.js",
       "www/lib/angular-ui-calendar/src/calendar.js",
+      "www/lib/pouchdb/pouchdb-3.6.0.min.js",
       "www/js/app.js",
       "www/js/account/addAccount.js",
       "jasmine/spec/accountControllerSpec.js"

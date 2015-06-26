@@ -30,7 +30,20 @@ describe('accountController', function(){
         expect(scope).toBeDefined();
     });
 
-    it("should have an add account function", function(){
+    it("should have an add account controller", function(){
         expect(scope.addAccount).toBeDefined();
+    });
+
+    it("should add an account", function(){
+        var validAccount = 
+        {
+            "name": "Joanne Choo",
+            "gender": "F",
+            "dob": "24/06/2015",
+            "length": "43",
+            "weight": "3",
+        };
+        var valid = scope.addAccount(validAccount);
+        expect(valid).toBeFalsy();
     });
 });
